@@ -24,20 +24,28 @@
     <div style="width: 35%;">
         <div class="form-row">
             <div class="mb-3">
-                <label class="text-primary" class="form-label">Username</label>
-                {{form.username}}
+                <label class="text-primary" class="form-label">Email</label>
+                {{form.email}}
             </div>
-            <span>{{form.errors.username}}</span>
-        </div>
+            <span>{{form.errors.email}}</span>
+        </div>    
         <div class="form-row">
             <div class="mb-3">
-                <label class="text-primary" class="form-label">Password</label>
+                <div class="row justify-content-end">
+                    <div class="col">
+                        <label class="text-primary" class="form-label">Password</label>
+                    </div>     
+                    <div class="col-4">
+                        <a href="{% url 'users:password_reset' %}" class="fst-italic">forgot password?</a>
+                    </div>    
+                </div>    
                 {{form.password}}
             </div>
+            
             <span>{{form.errors.password}}</span>
         </div>
         <button type="submit" class="btn btn-primary">Sing In</button>
-        <button type="reset" class="btn btn-primary">Reset</button>  
+        <button type="reset" class="btn btn-primary">Reset</button> 
     </div>    
 </form>
 {% endblock %}

@@ -1,13 +1,15 @@
 [tool.poetry]
-name = "python-web-hw13-2-django"
+name = "hw10"
 version = "0.1.0"
 description = ""
 authors = ["Kirienko-Alyona <ladybird.miami@gmail.com>"]
 readme = "README.md"
-packages = [{include = "python_web_hw13_2_django"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+django = "^4.1.7"
+psycopg2 = "^2.9.5"
+django-environ = "^0.10.0"
 
 
 [build-system]
