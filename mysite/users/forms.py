@@ -19,10 +19,18 @@ class RegisterForm(UserCreationForm):
 
 
 class LoginForm(AuthenticationForm):
-    email = EmailField(max_length=150, required=True, widget=EmailInput(attrs={"class": "form-control"}))
+    username = CharField(max_length=100, required=True, widget=TextInput(attrs={"class": "form-control"}))
     password = CharField(max_length=12, min_length=8, required=True,
                           widget=PasswordInput(attrs={"class": "form-control"}))
 
     class Meta:
         model = User
-        fields = ("email", "password")
+        fields = ("username", "password")
+        
+        
+# class ResetPassword(UserCreationForm):
+#     email = EmailField(max_length=150, required=True, widget=EmailInput(attrs={"class": "form-control"}))
+    
+#     class Meta:
+#         model = User
+#         fields = ("email",)
